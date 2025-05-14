@@ -73,6 +73,12 @@ public class Main {
         usuarios.add(new Usuario("carlos.rodriguez@gmail.com", "abcd", "Carlos Rodriguez", "9999000011112222"));
         usuarios.add(new Usuario("laura.martinez@gmail.com", "qwerty", "Laura Martinez", "3333444455556666"));
         usuarios.add(new Usuario("diego.torres@gmail.com", "zxcv", "Diego Torres", "7777888899990000"));
+
+        vuelos.add(new Vuelo("V001", "Bogotá", "Medellín", "2025-06-01", "08:00", "Económica", "Avianca", 50));
+        vuelos.add(new Vuelo("V002", "Cali", "Cartagena", "2025-06-02", "10:00", "Económica", "LATAM", 60));
+        vuelos.add(new Vuelo("V003", "Barranquilla", "Santa Marta", "2025-06-03", "12:00", "Ejecutiva", "Viva Air", 40));
+        vuelos.add(new Vuelo("V004", "Pereira", "San Andrés", "2025-06-04", "14:00", "Económica", "EasyFly", 30));
+        vuelos.add(new Vuelo("V005", "Bucaramanga", "Bogotá", "2025-06-05", "16:00", "Ejecutiva", "SATENA", 20));
         int opcion;
         do {
             System.out.println("\n--VUELOMON AIRLINES---");
