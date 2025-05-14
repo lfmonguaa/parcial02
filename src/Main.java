@@ -1,17 +1,71 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("holabebesotas");
-        System.out.println("hay fe"        )
+import java.util.*;
 
+class Usuario {
+    String email;
+    String contrasena;
+    String nombre;
+    String tarjetaCredito;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    public Usuario(String correo, String pass, String nom, String tarjeta) {
+        email = correo;
+        contrasena = pass;
+        nombre = nom;
+        tarjetaCredito = tarjeta;
+    }
+
+    public String toString() {
+        return "Usuario: " + nombre + ", Email: " + email;
     }
 }
+
+class Vuelo {
+    String idVuelo;
+    String origen;
+    String destino;
+    String fecha;
+    String hora;
+    String categoriaAsiento;
+    String aerolinea;
+    int asientosDisponibles;
+
+    public Vuelo(String id, String origenVuelo, String destinoVuelo, String fechaVuelo, String horaVuelo, String categoria, String aerolineaVuelo, int disponibles) {
+        idVuelo = id;
+        origen = origenVuelo;
+        destino = destinoVuelo;
+        fecha = fechaVuelo;
+        hora = horaVuelo;
+        categoriaAsiento = categoria;
+        aerolinea = aerolineaVuelo;
+        asientosDisponibles = disponibles;
+    }
+
+    public String toString() {
+        return "Vuelo: " + idVuelo + " de " + origen + " a " + destino + ", Fecha: " + fecha + ", Hora: " + hora;
+    }
+}
+
+class Reserva {
+    String idReserva;
+    Usuario usuario;
+    Vuelo vuelo;
+    String fechaReserva;
+
+    public Reserva(String id, Usuario usu, Vuelo vue, String fechaRes) {
+        idReserva = id;
+        usuario = usu;
+        vuelo = vue;
+        fechaReserva = fechaRes;
+    }
+
+    public String toString() {
+        return "Reserva: " + idReserva + ", Usuario: " + usuario.nombre + ", Vuelo: " + vuelo.idVuelo;
+    }
+}
+
+public class Main {
+    static Scanner scanner = new Scanner(System.in);
+    static List<Usuario> usuarios = new ArrayList<>();
+    static List<Vuelo> vuelos = new ArrayList<>();
+    static List<Reserva> reservas = new ArrayList<>();
+}
+
